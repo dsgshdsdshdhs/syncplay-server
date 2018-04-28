@@ -5,8 +5,8 @@
     "name": "app",
     "memory": 50,
     "portMappings": [{
-      "hostPort": 8999,
-      "containerPort": 8999
+      "hostPort": 80,
+      "containerPort": 80
     }],
     "environment": [{
       "name": "_ECS_R53_DNS", "value": "syncplay.mydomain.tld"
