@@ -6,10 +6,6 @@ if [ -n $SALT ]; then
   args="$args --salt=$SALT"
 fi
 
-if [ -n "$PORT" ]; then
-  args="$args --port=$PORT"
-fi
-
 if [ -n "$ISOLATE" ]; then
   args="$args --isolate-rooms"
 fi
@@ -23,4 +19,4 @@ if [ -n "$PASSWORD" ]; then
   args="$args --password=$PASSWORD"
 fi
 
-exec $(eval "./syncplayServer.py $args $@")
+exec $(eval "./syncplayServer.py --port=80 $args $@")
